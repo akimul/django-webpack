@@ -1,0 +1,16 @@
+package-lock.json
+
+db.sqlite3
+
+myprofile/media/
+**bundles/
+
+**/node_modules
+*.pyc
+/static
+
+.idea
+*.idea
+
+venv/
+venv/*

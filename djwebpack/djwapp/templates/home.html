@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Home</title>
+      <link rel="stylesheet" href="./static/css/main.css">
+   </head>
+   <body>
+      <div class="center">
+         <h1 class="name">Hi <span id="name"></span></h1>
+         <h3 id="counter"></h3>
+         <button id='fetch-btn'>Fetch Data</button>
+         <hr>
+         <div >
+            <table id='data-table'>
+               <thead>
+                     <tr>
+                        <th>Name</th>
+                        <th>Year</th>
+                        <th>Department</th>
+                     </tr>
+               </thead>
+               <tbody id="table-body">
+
+               </tbody>
+               
+            </table>
+         </div>
+         <script src="{% static 'bundle.js' %}"></script>
+      </div>
+   </body>
+</html>
