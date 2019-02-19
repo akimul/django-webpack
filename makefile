@@ -1,4 +1,4 @@
-virtualenv = /home/akash/virtual-python-envs/djwebenv
+virtualenv = /home/akimul/virtual-python-envs/testcmdenv
 projectdir = .
 
 run:
