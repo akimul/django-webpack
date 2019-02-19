@@ -7,7 +7,20 @@ Simple django app with webpack config and ES6 syntax.
 - Root/djwebpack: django apps
 - Root/djwebpack/djwebpack: django settings
 
+## Requirements
+- Node js installed
+- python3 installed
+
 ## Installation
+
+### Webpack
+
+Under `/client`
+
+```
+npm install 
+npm run build:local
+```
 
 ### Django
 
@@ -22,11 +35,17 @@ virtualenv = /home/akash/virtual-python-envs/djwenv
 	* make run
 
 
-### Webpack
+### Multiple js entry for webpack
 
-Under `/client`
-
+If there are multiple js files for different templates, you can separate entry in the config file:
 ```
-npm install 
-npm run build:local
+entry: {
+    app: './js/index.js',
+    another: './js/another.js'
+},
+output: {
+    path: DIST_DIR + "/dist",
+    filename: '[name].bundle.js'
+},
 ```
+The webpack script will now compile two applications: `index.js` and `another.js`. It will create two compiled files based on the entry name: `app.bundle.js` and `another.bundle.js`. Then from the required template, we can the required js.
