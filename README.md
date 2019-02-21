@@ -8,8 +8,10 @@ Simple django app with webpack config and ES6 syntax.
 - Root/djwebpack/djwebpack: django settings
 
 ## Requirements
-- Node js installed
-- python3 installed
+- Python (>= 3.0.0)
+- virtualenv
+- nodejs
+npm
 
 ## Installation
 
@@ -50,18 +52,3 @@ output: {
 ```
 The webpack script will now compile two applications: `index.js` and `another.js`. It will create two compiled files based on the entry name: `app.bundle.js` and `another.bundle.js`. Then from the required template, we can the required js.
 
-### CMS 
-```
-virtualenv -p /usr/bin/python3 dwenv
-source virtual-python-envs/dwenv/bin/activate
-pip install Django==1.11
-django-admin startproject djwebpack
-cd djwebpack
-./manage.py startapp djwapp
-mkdir -p djwapp/templates djwapp/static/js djwapp/static/css
-
-
-npm init -y
-npm i webpack webpack-cli
-npm install -D babel-loader @babel/core @babel/preset-env
-```
